@@ -1,0 +1,15 @@
+# The root query for the application
+type Query {
+    getMoviesPaginated(page: Int, size: Int): [Movie]!
+}
+
+type Movie {
+    name: String!
+    year: Int!
+    director: Director!
+}
+
+type Director {
+    directorId: ID!
+    name: String!
+}
